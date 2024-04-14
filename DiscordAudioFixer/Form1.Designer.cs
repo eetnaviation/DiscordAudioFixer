@@ -34,6 +34,7 @@
             this.visualLog = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.attachToProcessBtn = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // runningProcesses
@@ -88,12 +89,24 @@
             this.attachToProcessBtn.UseVisualStyleBackColor = true;
             this.attachToProcessBtn.Click += new System.EventHandler(this.attachToProcessBtn_Click);
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.BackColor = System.Drawing.Color.Transparent;
+            this.checkBox1.Location = new System.Drawing.Point(1452, 16);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(123, 19);
+            this.checkBox1.TabIndex = 5;
+            this.checkBox1.Text = "Verbose mode (-v)";
+            this.checkBox1.UseVisualStyleBackColor = false;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::DiscordAudioFixer.Properties.Resources.bg1;
+            this.BackgroundImage = global::DiscordAudioFixer.Properties.Resources.bg_fixed1;
             this.ClientSize = new System.Drawing.Size(1587, 660);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.attachToProcessBtn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.visualLog);
@@ -115,5 +128,6 @@
         private RichTextBox visualLog;
         private Label label2;
         private Button attachToProcessBtn;
+        private CheckBox checkBox1;
     }
 }
