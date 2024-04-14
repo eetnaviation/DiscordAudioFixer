@@ -97,7 +97,7 @@
             // 
             this.verboseMode.AutoSize = true;
             this.verboseMode.BackColor = System.Drawing.Color.Transparent;
-            this.verboseMode.Location = new System.Drawing.Point(1452, 41);
+            this.verboseMode.Location = new System.Drawing.Point(1452, 14);
             this.verboseMode.Name = "verboseMode";
             this.verboseMode.Size = new System.Drawing.Size(123, 19);
             this.verboseMode.TabIndex = 5;
