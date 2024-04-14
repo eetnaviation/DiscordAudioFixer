@@ -17,6 +17,7 @@ namespace DiscordAudioFixer
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            visualLog.ReadOnly = true;
             int selfProcessId = Process.GetCurrentProcess().Id;
             Process selfProcessName = Process.GetProcessById(selfProcessId);
             appendToVisualLog("'" + System.Reflection.Assembly.GetEntryAssembly().Location + "' , Run @ PID: " + selfProcessId.ToString() + ". pName: " + selfProcessName);
