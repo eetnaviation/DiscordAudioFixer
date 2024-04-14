@@ -5,7 +5,6 @@ I:\Programming\DiscordAudioFixer\DiscordAudioFixer\bin\Debug\net6.0-windows\Disc
 I:\Programming\DiscordAudioFixer\DiscordAudioFixer\bin\Debug\net6.0-windows\DiscordAudioFixer.pdb
 I:\Programming\DiscordAudioFixer\DiscordAudioFixer\bin\Debug\net6.0-windows\System.Management.dll
 I:\Programming\DiscordAudioFixer\DiscordAudioFixer\obj\Debug\net6.0-windows\DiscordAudioFixer.csproj.AssemblyReference.cache
-I:\Programming\DiscordAudioFixer\DiscordAudioFixer\obj\Debug\net6.0-windows\DiscordAudioFixer.Form1.resources
 I:\Programming\DiscordAudioFixer\DiscordAudioFixer\obj\Debug\net6.0-windows\DiscordAudioFixer.csproj.GenerateResource.cache
 I:\Programming\DiscordAudioFixer\DiscordAudioFixer\obj\Debug\net6.0-windows\DiscordAudioFixer.GeneratedMSBuildEditorConfig.editorconfig
 I:\Programming\DiscordAudioFixer\DiscordAudioFixer\obj\Debug\net6.0-windows\DiscordAudioFixer.AssemblyInfoInputs.cache
@@ -17,3 +16,7 @@ I:\Programming\DiscordAudioFixer\DiscordAudioFixer\obj\Debug\net6.0-windows\refi
 I:\Programming\DiscordAudioFixer\DiscordAudioFixer\obj\Debug\net6.0-windows\DiscordAudioFixer.pdb
 I:\Programming\DiscordAudioFixer\DiscordAudioFixer\obj\Debug\net6.0-windows\DiscordAudioFixer.genruntimeconfig.cache
 I:\Programming\DiscordAudioFixer\DiscordAudioFixer\obj\Debug\net6.0-windows\ref\DiscordAudioFixer.dll
+I:\Programming\DiscordAudioFixer\DiscordAudioFixer\bin\Debug\net6.0-windows\System.CodeDom.dll
+I:\Programming\DiscordAudioFixer\DiscordAudioFixer\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Management.dll
+I:\Programming\DiscordAudioFixer\DiscordAudioFixer\obj\Debug\net6.0-windows\DiscordAudioFixer.MainWindow.resources
+I:\Programming\DiscordAudioFixer\DiscordAudioFixer\obj\Debug\net6.0-windows\DiscordAudioFixer.Properties.Resources.resources

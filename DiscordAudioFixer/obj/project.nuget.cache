@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "D4zSPG2hBuldy+4fiDcNilIncmgRDeCd8RODGY7lMavmQQQsn8M06i/68XALBMdOfMjlVU/eEo64g4cAPrXQ2Q==",
+  "dgSpecHash": "SUAZ75YhMDdpokQYC1Pq0pNppykB4Ga62Nezsh/KCReIsl7IqnmZ1bddnSrZTKF+iJLmlXA2VitXl5Dn6eH9Zg==",
   "success": true,
   "projectFilePath": "I:\\Programming\\DiscordAudioFixer\\DiscordAudioFixer\\DiscordAudioFixer.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\renha\\.nuget\\packages\\system.codedom\\8.0.0\\system.codedom.8.0.0.nupkg.sha512",
+    "C:\\Users\\renha\\.nuget\\packages\\system.management\\8.0.0\\system.management.8.0.0.nupkg.sha512",
     "C:\\Users\\renha\\.nuget\\packages\\system.management.dll\\1.0.0\\system.management.dll.1.0.0.nupkg.sha512"
   ],
   "logs": [
