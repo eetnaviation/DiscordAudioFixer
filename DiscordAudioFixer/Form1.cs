@@ -51,34 +51,39 @@ namespace DiscordAudioFixer
                 ManagementObjectSearcher searcher =
                     new ManagementObjectSearcher("root\\CIMV2",
                     "SELECT * FROM Win32_SoundDevice");
-
+                int audioDeviceNum = 0;
+                appendToVisualLog("-------------------------\n-------------------------\n-------------------------"); // This is needed so it displays the 3 lines before the first one as there may be other lines there.
                 foreach (ManagementObject queryObj in searcher.Get())
                 {
-                    appendToVisualLog("-----------------------------------");
-                    appendToVisualLog("List of sound cards installed");
-                    appendToVisualLog("-----------------------------------");
-                    appendToVisualLog("ProductName: {0}" + queryObj["ProductName"]);
-                    appendToVisualLog("Availability: {0}" + queryObj["Availability"]);
-                    appendToVisualLog("Caption: {0}" + queryObj["Caption"]);
-                    appendToVisualLog("ConfigManagerErrorCode: {0}" + queryObj["ConfigManagerErrorCode"]);
-                    appendToVisualLog("ConfigManagerUserConfig: {0}" + queryObj["ConfigManagerUserConfig"]);
-                    appendToVisualLog("CreationClassName: {0}" + queryObj["CreationClassName"]);
-                    appendToVisualLog("Description: {0}" + queryObj["Description"]);
-                    appendToVisualLog("DeviceID: {0}" + queryObj["DeviceID"]);
-                    appendToVisualLog("DMABufferSize: {0}" + queryObj["DMABufferSize"]);
-                    appendToVisualLog("ErrorCleared: {0}" + queryObj["ErrorCleared"]);
-                    appendToVisualLog("ErrorDescription: {0}" + queryObj["ErrorDescription"]);
-                    appendToVisualLog("InstallDate: {0}" + queryObj["InstallDate"]);
-                    appendToVisualLog("LastErrorCode: {0}" + queryObj["LastErrorCode"]);
-                    appendToVisualLog("Manufacturer: {0}" + queryObj["Manufacturer"]);
-                    appendToVisualLog("MPU401Address: {0}" + queryObj["MPU401Address"]);
-                    appendToVisualLog("Name: {0}" + queryObj["Name"]);
-                    appendToVisualLog("PNPDeviceID: {0}" + queryObj["PNPDeviceID"]);
-                    appendToVisualLog("PowerManagementSupported: {0}" + queryObj["PowerManagementSupported"]);
-                    appendToVisualLog("Status: {0}" + queryObj["Status"]);
-                    appendToVisualLog("StatusInfo: {0}" + queryObj["StatusInfo"]);
-                    appendToVisualLog("SystemCreationClassName: {0}" + queryObj["SystemCreationClassName"]);
-                    appendToVisualLog("SystemName: {0}" + queryObj["SystemName"]);
+                    appendToVisualLog("---Audio device " + audioDeviceNum + ", Name: " + queryObj["ProductName"] + "---");
+                    appendToVisualLog("ProductName: " + queryObj["ProductName"]);
+                    appendToVisualLog("Availability: " + queryObj["Availability"]);
+                    appendToVisualLog("Description: " + queryObj["Description"]);
+                    appendToVisualLog("DeviceID: " + queryObj["DeviceID"]);
+                    appendToVisualLog("Manufacturer: " + queryObj["Manufacturer"]);
+                    appendToVisualLog("Name: " + queryObj["Name"]);
+                    appendToVisualLog("Status: " + queryObj["Status"]);
+                    appendToVisualLog("SystemName: " + queryObj["SystemName"]);
+                    // Show extra info about the device if in verbose mode
+                    if (verboseMode.Checked == true)
+                    {
+                        appendToVisualLog("Caption: " + queryObj["Caption"]);
+                        appendToVisualLog("ConfigManagerErrorCode: " + queryObj["ConfigManagerErrorCode"]);
+                        appendToVisualLog("ConfigManagerUserConfig: " + queryObj["ConfigManagerUserConfig"]);
+                        appendToVisualLog("CreationClassName: " + queryObj["CreationClassName"]);
+                        appendToVisualLog("DMABufferSize: " + queryObj["DMABufferSize"]);
+                        appendToVisualLog("ErrorCleared: " + queryObj["ErrorCleared"]);
+                        appendToVisualLog("ErrorDescription: " + queryObj["ErrorDescription"]);
+                        appendToVisualLog("InstallDate: " + queryObj["InstallDate"]);
+                        appendToVisualLog("LastErrorCode: " + queryObj["LastErrorCode"]);
+                        appendToVisualLog("MPU401Address: " + queryObj["MPU401Address"]);
+                        appendToVisualLog("SystemCreationClassName: " + queryObj["SystemCreationClassName"]);
+                        appendToVisualLog("StatusInfo: " + queryObj["StatusInfo"]);
+                        appendToVisualLog("PNPDeviceID: " + queryObj["PNPDeviceID"]);
+                        appendToVisualLog("PowerManagementSupported: " + queryObj["PowerManagementSupported"]);
+                    }
+                    appendToVisualLog("-------------------------\n-------------------------\n-------------------------");
+                    audioDeviceNum++;
                 }
             }
             catch (ManagementException e)
