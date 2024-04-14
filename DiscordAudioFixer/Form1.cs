@@ -22,6 +22,8 @@ namespace DiscordAudioFixer
             Process selfProcessName = Process.GetProcessById(selfProcessId);
             appendToVisualLog("'" + System.Reflection.Assembly.GetEntryAssembly().Location + "' , Run @ PID: " + selfProcessId.ToString() + ". pName: " + selfProcessName);
             PopulateRunningProcessesList();
+            appendToVisualLog("Scan audio devices...");
+            getAudioDevices();
         }
 
         private void runningProcesses_SelectedIndexChanged(object sender, EventArgs e)
@@ -55,6 +57,8 @@ namespace DiscordAudioFixer
                 appendToVisualLog("-------------------------\n-------------------------\n-------------------------"); // This is needed so it displays the 3 lines before the first one as there may be other lines there.
                 foreach (ManagementObject queryObj in searcher.Get())
                 {
+                    inputChoices.Items.Add(queryObj["ProductName"]);
+                    outputChoices.Items.Add(queryObj["ProductName"]);
                     appendToVisualLog("---Audio device " + audioDeviceNum + ", Name: " + queryObj["ProductName"] + "---");
                     appendToVisualLog("ProductName: " + queryObj["ProductName"]);
                     appendToVisualLog("Availability: " + queryObj["Availability"]);
@@ -107,7 +111,6 @@ namespace DiscordAudioFixer
 
         private void attachToProcessBtn_Click(object sender, EventArgs e)
         {
-            getAudioDevices();
             appendToVisualLog("Clicked attachToProcessBtn, runningProcesses.SelectedIndex val: " + runningProcesses.SelectedIndex);
             if (runningProcesses.SelectedIndex != -1)
             {

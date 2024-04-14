@@ -35,6 +35,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.attachToProcessBtn = new System.Windows.Forms.Button();
             this.verboseMode = new System.Windows.Forms.CheckBox();
+            this.inputChoices = new System.Windows.Forms.ComboBox();
+            this.outputChoices = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // runningProcesses
@@ -100,12 +104,52 @@
             this.verboseMode.Text = "Verbose mode (-v)";
             this.verboseMode.UseVisualStyleBackColor = false;
             // 
+            // inputChoices
+            // 
+            this.inputChoices.FormattingEnabled = true;
+            this.inputChoices.Location = new System.Drawing.Point(76, 69);
+            this.inputChoices.Name = "inputChoices";
+            this.inputChoices.Size = new System.Drawing.Size(344, 23);
+            this.inputChoices.TabIndex = 6;
+            // 
+            // outputChoices
+            // 
+            this.outputChoices.FormattingEnabled = true;
+            this.outputChoices.Location = new System.Drawing.Point(76, 98);
+            this.outputChoices.Name = "outputChoices";
+            this.outputChoices.Size = new System.Drawing.Size(344, 23);
+            this.outputChoices.TabIndex = 7;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Location = new System.Drawing.Point(30, 72);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(40, 15);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "INPUT";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Location = new System.Drawing.Point(19, 101);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(51, 15);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "OUTPUT";
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::DiscordAudioFixer.Properties.Resources.bg;
             this.ClientSize = new System.Drawing.Size(1587, 660);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.outputChoices);
+            this.Controls.Add(this.inputChoices);
             this.Controls.Add(this.verboseMode);
             this.Controls.Add(this.attachToProcessBtn);
             this.Controls.Add(this.label2);
@@ -129,5 +173,9 @@
         private Label label2;
         private Button attachToProcessBtn;
         private CheckBox verboseMode;
+        private ComboBox inputChoices;
+        private ComboBox outputChoices;
+        private Label label3;
+        private Label label4;
     }
 }
