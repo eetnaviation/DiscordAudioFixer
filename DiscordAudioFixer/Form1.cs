@@ -121,5 +121,13 @@ namespace DiscordAudioFixer
                 appendToVisualLog("Unable to attach! Did you make a selection from the DropDownList?");
             }
         }
+
+        private void scanDevicesBtn_Click(object sender, EventArgs e)
+        {
+            inputChoices.Items.Clear();
+            outputChoices.Items.Clear();
+            appendToVisualLog("Rescanning audio devices!");
+            getAudioDevices();
+        }
     }
 }

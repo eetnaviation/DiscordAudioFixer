@@ -39,6 +39,7 @@
             this.outputChoices = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.scanDevicesBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // runningProcesses
@@ -140,12 +141,23 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "OUTPUT";
             // 
+            // scanDevicesBtn
+            // 
+            this.scanDevicesBtn.Location = new System.Drawing.Point(76, 127);
+            this.scanDevicesBtn.Name = "scanDevicesBtn";
+            this.scanDevicesBtn.Size = new System.Drawing.Size(75, 23);
+            this.scanDevicesBtn.TabIndex = 10;
+            this.scanDevicesBtn.Text = "RESCAN";
+            this.scanDevicesBtn.UseVisualStyleBackColor = true;
+            this.scanDevicesBtn.Click += new System.EventHandler(this.scanDevicesBtn_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::DiscordAudioFixer.Properties.Resources.bg;
             this.ClientSize = new System.Drawing.Size(1587, 660);
+            this.Controls.Add(this.scanDevicesBtn);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.outputChoices);
@@ -177,5 +189,6 @@
         private ComboBox outputChoices;
         private Label label3;
         private Label label4;
+        private Button scanDevicesBtn;
     }
 }
