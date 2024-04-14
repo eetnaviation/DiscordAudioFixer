@@ -40,6 +40,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.scanDevicesBtn = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // runningProcesses
@@ -151,12 +152,23 @@
             this.scanDevicesBtn.UseVisualStyleBackColor = true;
             this.scanDevicesBtn.Click += new System.EventHandler(this.scanDevicesBtn_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Location = new System.Drawing.Point(875, 16);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(408, 15);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "If there are multiple processes with the same name choose any one of them.";
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::DiscordAudioFixer.Properties.Resources.bg;
             this.ClientSize = new System.Drawing.Size(1587, 660);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.scanDevicesBtn);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -190,5 +202,6 @@
         private Label label3;
         private Label label4;
         private Button scanDevicesBtn;
+        private Label label5;
     }
 }

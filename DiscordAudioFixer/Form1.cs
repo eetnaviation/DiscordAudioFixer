@@ -111,10 +111,19 @@ namespace DiscordAudioFixer
 
         private void attachToProcessBtn_Click(object sender, EventArgs e)
         {
-            appendToVisualLog("Clicked attachToProcessBtn, runningProcesses.SelectedIndex val: " + runningProcesses.SelectedIndex);
-            if (runningProcesses.SelectedIndex != -1)
+            if (verboseMode.Checked) { appendToVisualLog("RunningProcesses selection: " + runningProcesses.SelectedIndex.ToString() + ", InputChoices selection: " + inputChoices.SelectedIndex.ToString() + ", OutputChoices selection: " + outputChoices.SelectedIndex.ToString()); }
+            if (runningProcesses.SelectedIndex != -1 && inputChoices.SelectedIndex != -1 && outputChoices.SelectedIndex != -1)
             {
-                // Continue with stuff to attach to discord process
+                int processId = GetProcessId(runningProcesses.SelectedItem.ToString());
+                appendToVisualLog("Trying to attach to PID: " + processId.ToString());
+                /*
+                device.AudioSessionManager2.OnSessionCreated += (sender, session) =>
+                {
+                    if (session.GetProcessID == processId)
+                    {
+                        session.Disconnect(); // This should be moved so that it can fully mute audio
+                    }
+                };*/
             }
             else
             {
@@ -128,6 +137,18 @@ namespace DiscordAudioFixer
             outputChoices.Items.Clear();
             appendToVisualLog("Rescanning audio devices!");
             getAudioDevices();
+        }
+
+        static int GetProcessId(string processName)
+        {
+            foreach (System.Diagnostics.Process process in System.Diagnostics.Process.GetProcesses())
+            {
+                if (process.ProcessName == processName)
+                {
+                    return process.Id;
+                }
+            }
+            return -1; // Process not found
         }
     }
 }
