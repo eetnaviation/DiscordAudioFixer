@@ -111,10 +111,11 @@ namespace DiscordAudioFixer
 
         private void attachToProcessBtn_Click(object sender, EventArgs e)
         {
-            if (verboseMode.Checked) { appendToVisualLog("RunningProcesses selection: " + runningProcesses.SelectedIndex.ToString() + ", InputChoices selection: " + inputChoices.SelectedIndex.ToString() + ", OutputChoices selection: " + outputChoices.SelectedIndex.ToString()); }
+            verbosePrint("RunningProcesses selection: " + runningProcesses.SelectedIndex.ToString() + ", InputChoices selection: " + inputChoices.SelectedIndex.ToString() + ", OutputChoices selection: " + outputChoices.SelectedIndex.ToString());
             if (runningProcesses.SelectedIndex != -1 && inputChoices.SelectedIndex != -1 && outputChoices.SelectedIndex != -1)
             {
                 int processId = GetProcessId(runningProcesses.SelectedItem.ToString());
+                verbosePrint("ProcessSelection: " + runningProcesses.SelectedItem.ToString() + " running on PID " + processId.ToString());
                 appendToVisualLog("Trying to attach to PID: " + processId.ToString());
                 /*
                 device.AudioSessionManager2.OnSessionCreated += (sender, session) =>
@@ -137,6 +138,14 @@ namespace DiscordAudioFixer
             outputChoices.Items.Clear();
             appendToVisualLog("Rescanning audio devices!");
             getAudioDevices();
+        }
+
+        private void verbosePrint(string printable)
+        {
+            if (verboseMode.Checked)
+            {
+                appendToVisualLog(printable);
+            }
         }
 
         static int GetProcessId(string processName)
