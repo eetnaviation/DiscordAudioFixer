@@ -69,7 +69,7 @@ namespace DiscordAudioFixer
                     appendToVisualLog("Status: " + queryObj["Status"]);
                     appendToVisualLog("SystemName: " + queryObj["SystemName"]);
                     // Show extra info about the device if in verbose mode
-                    if (verboseMode.Checked == true)
+                    if (verboseMode.Checked == true) // It is easier to do this than to replace every single one with verbosePrint
                     {
                         appendToVisualLog("Caption: " + queryObj["Caption"]);
                         appendToVisualLog("ConfigManagerErrorCode: " + queryObj["ConfigManagerErrorCode"]);
